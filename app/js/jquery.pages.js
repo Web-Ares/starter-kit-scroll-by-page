@@ -104,13 +104,6 @@
                 }
 
             },
-            _getMaxScroll = function(){
-                _maxScroll = 0;
-                _pages.each( function(){
-                    _maxScroll += $( this ).height();
-                } );
-                _maxScroll -= _window.height();
-            },
             _getPageHeightInWindow = function( page ){
                 var height = 0,
                     offsetTop = page.offset().top,
@@ -149,7 +142,6 @@
             },
             _init = function () {
                 _addEvents();
-                _getMaxScroll();
                 _obj[0].obj = _self;
                 _obj.niceScroll( {
                     cursorwidth: '14px',
